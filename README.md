@@ -1,6 +1,3 @@
-Sure, here's a more structured and detailed guide to run a PWR Chain validator node:
-
----
 
 ### **PWR Chain Validator Node Guide**
 
