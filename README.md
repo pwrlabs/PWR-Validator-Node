@@ -28,7 +28,6 @@
 
 4. **Set Up your Password**:
    ```bash
-   sudo touch password
    sudo nano password
    ```
    - Enter your desired password.
