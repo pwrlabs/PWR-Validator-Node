@@ -11,22 +11,27 @@
 
 #### **Setup on Ubuntu Server**:
 
-1. **Install Java**: 
+1. **Update OS**: 
+   ```bash
+   sudo apt update
+   ```
+
+2. **Install Java**: 
    ```bash
    apt install openjdk-19-jre-headless
    ```
 
-2. **Clone the PWR Validator Node Repository**:
+3. **Clone the PWR Validator Node Repository**:
    ```bash
    git clone https://github.com/PWR-Labs/PWR-Validator-Node.git
    ```
 
-3. **Navigate to the Validator Node Directory**:
+4. **Navigate to the Validator Node Directory**:
    ```bash
    cd PWR-Validator-Node
    ```
 
-4. **Set Up your Password**:
+5. **Set Up your Password**:
    ```bash
    sudo nano password
    ```
@@ -34,7 +39,7 @@
    - Press `Ctrl + x` to close.
    - Press `Y` to confirm saving the password.
 
-5. **Run the Node**:
+6. **Run the Node**:
    Replace `<YOUR_SERVER_IP>` with your server's actual IP.
    ```bash
    java -jar validator.jar password <YOUR_SERVER_IP>
@@ -45,7 +50,7 @@
      My address: 0xf4b2f12afa634c206bdf5f0dd6dd90f024ad62b7
      ```
 
-6. **Become a Validator Node**:
+7. **Become a Validator Node**:
 
    - Initially, your node will synchronize with the blockchain but will not assume validator responsibilities until it possesses staked PWR Coins.
    
@@ -53,7 +58,7 @@
    
    - After claiming your coins, your node will initiate a transaction to enlist as a validator.
 
-7. **Running in the Background**:
+8. **Running in the Background**:
    If you wish to run the node in the background, ensuring it remains active after closing the terminal, utilize the `nohup` command:
    ```bash
    nohup java -jar validator.jar password <YOUR_SERVER_IP> &
