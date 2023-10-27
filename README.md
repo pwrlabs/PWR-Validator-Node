@@ -74,7 +74,7 @@
 
    - Paste the following bash:
 	
-   ```
+```
 	SERVICE_NAME="PWRChainValidatorService"
 	
 	SERVICE_DESCRIPTION="Service to automatically start PWR chain validator node upon startup"
@@ -99,7 +99,7 @@ EOF
 	systemctl daemon-reload
 	systemctl enable ${SERVICE_NAME}.service
 	systemctl start ${SERVICE_NAME}.service
-	```
+```
 	
    - Save and quit (Control + X, then Y, then Enter)
    
