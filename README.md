@@ -65,7 +65,3 @@
    ```
 
 Congratulations, you've now set up and run a PWR Chain validator node!
-
----
-
-Feel free to adapt as necessary and inform users to always keep their passwords and private keys secure.
