@@ -65,7 +65,7 @@
    ```
 
 9. **Running on startup**:
-   If you wish to run the node when your machine boots up, then follow this step to create a systemd Service that's uaomtatically run on startup.
+   If you wish to run the node when your machine boots up, then follow this step to create a systemd Service that's automatically run on startup.
 
    - From /home/ubuntu:
 	```
