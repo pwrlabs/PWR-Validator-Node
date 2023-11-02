@@ -54,7 +54,7 @@
 
    - Initially, your node will synchronize with the blockchain but will not assume validator responsibilities until it possesses staked PWR Coins.
    
-   - To obtain sufficient PWR Coins for staking, [apply to become a testnet validator on our Discord server](https://discord.gg/DJkcuy9SAg). Once approved, share the displayed address with the team, and you'll receive a 100k PWR stake.
+   - To obtain sufficient PWR Coins for staking, [apply to become a testnet validator on our Discord server](https://discord.gg/DJkcuy9SAg). Once approved, you can use our discord bot to claim 100k PWR to stake.
    
    - After claiming your coins, your node will initiate a transaction to enlist as a validator.
 
