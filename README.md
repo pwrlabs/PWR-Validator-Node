@@ -7,11 +7,11 @@
 - **CPU**: Single Core
 - **Memory**: 1 GB RAM
 - **Disk**: 25 GB SSD
-- **Open Ports**: 8231, 8085
+- **Open Ports**: 8231, 8085 (TCP, Incoming & Outgoing)
 
 #### **Setup on Ubuntu Server**:
 
-1. **Update OS**: 
+1. **Update package information**: 
    ```bash
    sudo apt update
    ```
@@ -62,6 +62,94 @@
    If you wish to run the node in the background, ensuring it remains active after closing the terminal, utilize the `nohup` command:
    ```bash
    nohup java -jar validator.jar password <YOUR_SERVER_IP> &
+   ```
+
+9. **Running on startup**:
+   If you wish to run the node when your machine boots up, then follow this step to create a systemd Service that's automatically run on startup.
+
+   - From /home/ubuntu:
+	```
+	sudo nano runAtStartup.sh
+	```
+
+   - Paste the following bash:
+	
+```
+	SERVICE_NAME="PWRChainValidatorService"
+	
+	SERVICE_DESCRIPTION="Service to automatically start PWR chain validator node upon startup"
+	SCRIPT_PATH="/home/ubuntu/runValidator.sh"
+	
+	cat << EOF > "/etc/systemd/system/${SERVICE_NAME}.service"
+		[Unit]
+		Description=${SERVICE_DESCRIPTION}
+		After=multi-user.target
+	
+		[Service]
+		WorkingDirectory=/home/ubuntu/
+		Type=forking
+		ExecStart=${SCRIPT_PATH}
+	
+		[Install]
+		WantedBy=multi-user.target
+EOF
+	
+	chmod 777 "/etc/systemd/system/${SERVICE_NAME}.service"
+	
+	systemctl daemon-reload
+	systemctl enable ${SERVICE_NAME}.service
+	systemctl start ${SERVICE_NAME}.service
+```
+	
+   - Save and quit (Control + X, then Y, then Enter)
+   
+   - Then run
+   
+   ```
+   sudo nano runValidator.sh
+   ```
+   
+   - And paste the following bash:
+   
+   ```
+   #!/bin/bash
+   
+   IPADDR=""
+   
+   if [ $# -eq 0 ]; then
+   echo "Auto-IP mode"
+   IPADDR=$(curl -s https://ipinfo.io/ip)
+   else
+   echo "Custom IP mode"
+   IPADDR=$1
+   fi
+   
+   echo "Starting validator for $IPADDR"
+   echo "Logging to validator.log"
+   echo "nohup PID saved in nohupPID.log"
+   nohup java -jar validator.jar password $IPADDR > validator.log 2>&1 &
+   echo $! > nohupPID.log
+   ```
+   
+   - Save and quit (Control + X, then Y, then Enter)
+   
+   - Finally, make the scripts executable and run the runAtStartup.sh script:
+   
+   ```
+   sudo chmod 700 runValidator.sh && sudo chmod 700 runAtStartup.sh
+   ```
+   
+   ```
+   sudo ./runAtStartup.sh
+   ```
+   
+   Now your validator is running and will run automatically at boot!
+   
+10. **Stopping your validator**:
+   If you're using the auto-start on boot script, then you may stop your validator with the following command:
+
+   ```
+   sudo kill -9 `cat nohupPID.log` && sudo rm nohupPID.log
    ```
 
 Congratulations, you've now set up and run a PWR Chain validator node!
