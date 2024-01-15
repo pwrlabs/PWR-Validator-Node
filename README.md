@@ -42,7 +42,7 @@
 6. **Run the Node**:
    Replace `<YOUR_SERVER_IP>` with your server's actual IP.
    ```bash
-   java -jar validator.jar password <YOUR_SERVER_IP>
+   sudo java -jar validator.jar password <YOUR_SERVER_IP>
    ```
 
    - Upon initialization, the node will generate a wallet, store it locally, and display an address in the format: 
