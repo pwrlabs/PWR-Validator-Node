@@ -7,7 +7,8 @@
 - **CPU**: Single Core
 - **Memory**: 1 GB RAM
 - **Disk**: 25 GB SSD
-- **Open Ports**: 8231, 8085
+- **Open TCP Ports**: 8231, 8085
+- **Open UDP Port**: 7621
 
 #### **Setup on Ubuntu Server**:
 
