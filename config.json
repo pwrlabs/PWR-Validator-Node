@@ -15,7 +15,7 @@
   "description5": "How many tcp connections can be made per minute by other validators before the ip is limited or banned",
   "description6": "These 2 variables are only used in validator nodes and not rpc nodes",
   "validatorTcpAccessLimitPerMinute": 200,
-  "validatorTcpBanLimitPerMinute": 1000,
+  "validatorTcpBanLimitPerMinute": 400,
 
   "description7": "How many udp connections can be made per minute by random ips before the ip is limited or banned",
   "generalUdpAccessLimitPerMinute": 0,
@@ -23,8 +23,8 @@
 
   "description8": "How many udp connections can be made per minute by other validator nodes before the ip is limited or banned",
   "description": "These 2 variables are only used in validator nodes and not rpc nodes",
-  "validatorUdpAccessLimitPerMinute": 200,
-  "validatorUdpBanLimitPerMinute": 400,
+  "validatorUdpAccessLimitPerMinute": 3000,
+  "validatorUdpBanLimitPerMinute": 5000,
 
   "apiOpenAccessIps": [
     {
@@ -63,17 +63,6 @@
     }
   ],
 
-  "conduitVms": [
-    {
-      "vmId": 45,
-      "vmRpcUrl": "http://localhost:7456"
-    },
-    {
-      "vmId": 444869,
-      "vmRpcUrl": "http://localhost:6539"
-    }
-  ],
-
   "description9": "The interval in milliseconds that this node will wait before checking for new blocks",
   "note": "To properly detect if this node is synced in the Synchronizer class, it is advised to set this value to less than the block time",
   "synchronizationIntervals": 1000,
@@ -84,7 +73,7 @@
   "description14": "The max number of blocks to share per synchronization request from others",
   "synchronizationShareBlocksCount": 100,
   "description11": "If true, this node will synchronize with the validators, if false, it will synchronize with only the provided nodes",
-  "synchronizeWithValidators": "false",
+  "synchronizeWithValidators": "true",
   "description12": "The list of validator or rpc nodes that this node fetches blocks from",
   "synchronizationNodes": [
     {
