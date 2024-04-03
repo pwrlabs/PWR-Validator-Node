@@ -4,7 +4,7 @@
 **Important Note**: This is the inaugural testnet launch. While we strive for perfection, there might be unforeseen issues. We appreciate all feedback, bug reports, or any other issues reported in our [Discord server](https://discord.gg/DJkcuy9SAg).
 
 #### **Requirements**:
-- **CPU**: Single Core
+- **CPU**: 1 vCPU
 - **Memory**: 1 GB RAM
 - **Disk**: 25 GB SSD
 - **Open TCP Ports**: 8231, 8085
@@ -22,17 +22,13 @@
    apt install openjdk-19-jre-headless
    ```
 
-3. **Clone the PWR Validator Node Repository**:
+3. **Install the validator node software and config file**:
    ```bash
-   git clone https://github.com/PWR-Labs/PWR-Validator-Node.git
+   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/validator.jar
+   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/config.json
    ```
 
-4. **Navigate to the Validator Node Directory**:
-   ```bash
-   cd PWR-Validator-Node
-   ```
-
-5. **Set Up your Password**:
+4. **Set Up your Password**:
    ```bash
    sudo nano password
    ```
@@ -40,18 +36,21 @@
    - Press `Ctrl + x` to close.
    - Press `Y` to confirm saving the password.
 
-6. **Run the Node**:
+5. **Run the Node**:
    Replace `<YOUR_SERVER_IP>` with your server's actual IP.
    ```bash
-   sudo java -jar validator.jar password <YOUR_SERVER_IP>
+   sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0
    ```
-
+   PWR Chain is the first chain that supports block compression.
+   --compression-level sets the level of compression you want your node to use.
+   Compression level varies from 0 - 9. 0 disbales compression. 9 sets it to maximum.
+   
    - Upon initialization, the node will generate a wallet, store it locally, and display an address in the format: 
      ```
      My address: 0xf4b2f12afa634c206bdf5f0dd6dd90f024ad62b7
      ```
 
-7. **Become a Validator Node**:
+6. **Become a Validator Node**:
 
    - Initially, your node will synchronize with the blockchain but will not assume validator responsibilities until it possesses staked PWR Coins.
    
@@ -62,7 +61,7 @@
 8. **Running in the Background**:
    If you wish to run the node in the background, ensuring it remains active after closing the terminal, utilize the `nohup` command:
    ```bash
-   nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> &
+   nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0 &
    ```
 
 Congratulations, you've now set up and run a PWR Chain validator node!
