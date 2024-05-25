@@ -61,7 +61,7 @@
 8. **Running in the Background**:
    If you wish to run the node in the background, ensuring it remains active after closing the terminal, utilize the `nohup` command:
    ```bash
-   nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0 &amp!
+   nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0 &amp;
    ```
 
 Congratulations, you've now set up and run a PWR Chain validator node!
