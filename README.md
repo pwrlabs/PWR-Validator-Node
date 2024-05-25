@@ -43,7 +43,7 @@
    ```
    PWR Chain is the first chain that supports block compression.
    --compression-level sets the level of compression you want your node to use.
-   Compression level varies from 0 - 9. 0 disbales compression. 9 sets it to maximum.
+   Compression level varies from 0 - 9. 0 disables compression. 9 sets it to maximum.
    
    - Upon initialization, the node will generate a wallet, store it locally, and display an address in the format: 
      ```
