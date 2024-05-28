@@ -91,7 +91,7 @@ Congratulations, you've now set up and run a PWR Chain validator node!
 3. **Install the rpc node software and config file**:
    ```bash
    wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/validator.jar
-   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/config.json
+   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/rpc/config.json
    ```
    Modify the config file as needed.
 
