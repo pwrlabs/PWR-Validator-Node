@@ -1,5 +1,7 @@
 
-### **PWR Chain Validator Node Guide**
+### **PWR Chain Validator Node & RPC Node Guide**
+
+### **Validator Node Guide**
 
 **Important Note**: This is the inaugural testnet launch. While we strive for perfection, there might be unforeseen issues. We appreciate all feedback, bug reports, or any other issues reported in our [Discord server](https://discord.gg/DJkcuy9SAg).
 
@@ -65,3 +67,36 @@
    ```
 
 Congratulations, you've now set up and run a PWR Chain validator node!
+
+### **RPC Node Guide**
+
+#### **Requirements**:
+- **CPU**: 1 vCPU
+- **Memory**: 1 GB RAM
+- **Disk**: 25 GB HDD or higher
+- **Open TCP Ports**: 8231, 8085
+
+#### **Setup on Ubuntu Server**:
+
+1. **Update OS**: 
+   ```bash
+   sudo apt update
+   ```
+
+2. **Install Java**: 
+   ```bash
+   apt install openjdk-19-jre-headless
+   ```
+
+3. **Install the rpc node software and config file**:
+   ```bash
+   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/validator.jar
+   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/config.json
+   ```
+   Modify the config file as needed.
+
+4. **Run the node**:
+   ```bash
+   nohup sudo java -jar validator.jar --rpc & 
+   ```
+Congratulations, you've now set up and run a PWR Chain RPC node!
