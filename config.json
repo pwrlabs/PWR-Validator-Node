@@ -64,6 +64,9 @@
       "ip": "145.239.28.93"
     }
   ],
+  
+  "logShowInfo": true,
+  "logShowError": true,
 
   "synchronize": true,
   "description9": "The interval in milliseconds that this node will wait before checking for new blocks",
