@@ -65,13 +65,13 @@
     }
   ],
   
-  "logShowInfo": true,
-  "logShowError": true,
+  "logShowInfo": false,
+  "logShowError": false,
 
   "synchronize": true,
   "description9": "The interval in milliseconds that this node will wait before checking for new blocks",
   "note": "To properly detect if this node is synced in the Synchronizer class, it is advised to set this value to less than the block time",
-  "synchronizationIntervals": 500,
+  "synchronizationIntervals": 10,
   "description10": "The timeout in milliseconds that this node will wait before giving up on a block fetch",
   "synchronizationTimeout": 2000,
   "description13": "The number of blocks to request per synchronization request",
