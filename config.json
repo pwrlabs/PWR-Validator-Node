@@ -9,8 +9,8 @@
   "validatorApiBanLimitPerMinute": 100,
 
   "description4": "How many tcp connections can be made per minute by random ips before the ip is limited or banned",
-  "generalTcpAccessLimitPerMinute": 300,
-  "generalTcpBanLimitPerMinute": 450,
+  "generalTcpAccessLimitPerMinute": 600,
+  "generalTcpBanLimitPerMinute": 900,
 
   "description5": "How many tcp connections can be made per minute by other validators before the ip is limited or banned",
   "description6": "These 2 variables are only used in validator nodes and not rpc nodes",
@@ -71,15 +71,15 @@
   "synchronize": true,
   "description9": "The interval in milliseconds that this node will wait before checking for new blocks",
   "note": "To properly detect if this node is synced in the Synchronizer class, it is advised to set this value to less than the block time",
-  "synchronizationIntervals": 10,
+  "synchronizationIntervals": 100,
   "description10": "The timeout in milliseconds that this node will wait before giving up on a block fetch",
-  "synchronizationTimeout": 2000,
+  "synchronizationTimeout": 3000,
   "description13": "The number of blocks to request per synchronization request",
   "synchronizationRequestBlocksCount": 100,
   "description14": "The max number of blocks to share per synchronization request from others",
   "synchronizationShareBlocksCount": 10,
   "description11": "If true, this node will synchronize with the validators, if false, it will synchronize with only the provided nodes",
-  "synchronizeWithValidators": false,
+  "synchronizeWithValidators": true,
   "description12": "The list of validator or rpc nodes that this node fetches blocks from",
   "synchronizationNodes": [
     {
