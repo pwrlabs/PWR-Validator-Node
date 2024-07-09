@@ -85,6 +85,10 @@
     {
       "name": "PWR Public RPC Node",
       "ip": "51.68.144.27"
+    },
+    {
+      "name": "Block Daddy Chris' Node",
+      "ip": "138.3.254.109"
     }
   ]
 
