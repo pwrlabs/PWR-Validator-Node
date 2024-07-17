@@ -48,6 +48,10 @@
     {
       "name": "PWR Public RPC Node",
       "ip": "51.68.144.27"
+    },
+    {
+      "name": "Discord Validators Bot",
+      "ip": "145.239.28.93"
     }
   ],
 
@@ -55,6 +59,10 @@
     {
       "name": "PWR Public RPC Node",
       "ip": "51.68.144.27"
+    },
+    {
+      "name": "Discord Validators Bot",
+      "ip": "145.239.28.93"
     }
   ],
 
