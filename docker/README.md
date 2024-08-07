@@ -10,11 +10,11 @@ This guide explains how to run a PWR Validator Node using Docker. Docker helps a
 
 ## Quick Start
 
-1. **Download Dockerfile and docker compose.yaml**
+1. **Download Dockerfile and docker-compose.yaml**
 
    ```bash
    wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/docker/Dockerfile
-   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/docker/docker compose.yaml
+   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/docker/docker-compose.yaml
    ```
 
 2. **Create a `password` file**
@@ -27,7 +27,7 @@ This guide explains how to run a PWR Validator Node using Docker. Docker helps a
 
 ### A. Using Docker Compose
 
-1. Replace `<YOUR_PUBLIC_IP>` in `docker compose.yaml` with your actual public IP.
+1. Replace `<YOUR_PUBLIC_IP>` in `docker-compose.yaml` with your actual public IP.
 2. Run:
 
    ```bash
