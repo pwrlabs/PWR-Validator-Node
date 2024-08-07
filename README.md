@@ -70,7 +70,7 @@
 
 10. **Running in the Background**:
 
-If you wish to run the node in the background, ensuring it remains active after closing the terminal, utilize the `nohup` command:
+    If you wish to run the node in the background, ensuring it remains active after closing the terminal, utilize the `nohup` command:
    ```bash
    nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0 &
    ```
