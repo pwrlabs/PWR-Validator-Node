@@ -71,16 +71,15 @@
 10. **Running in the Background**:
 
     If you wish to run the node in the background, ensuring it remains active after closing the terminal, utilize the `nohup` command:
-   ```bash
-   nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0 &
-   ```
+    ```bash
+    nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0 &
+    ```
 
 11. **Getting Your Private Key**:
-   ```bash
-   nohup sudo java -jar validator.jar get-private-key password
-   ```
-
-   A hex string priate key will be returned. This key can be used in the [PWR Browser Wallet](https://chromewebstore.google.com/u/3/detail/pwr-wallet/kennjipeijpeengjlogfdjkiiadhbmjl) 
+    ```bash
+    nohup sudo java -jar validator.jar get-private-key password
+    ```
+    A hex string priate key will be returned. This key can be used in the [PWR Browser Wallet](https://chromewebstore.google.com/u/3/detail/pwr-wallet/kennjipeijpeengjlogfdjkiiadhbmjl) 
 
 Congratulations, you've now set up and run a PWR Chain validator node!
 
