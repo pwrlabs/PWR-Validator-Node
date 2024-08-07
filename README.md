@@ -46,13 +46,13 @@
    PWR Chain is the first chain that supports block compression.
    --compression-level sets the level of compression you want your node to use.
    Compression level varies from 0 - 9. 0 disables compression. 9 sets it to maximum.
-   
-   - Upon initialization, the node will generate a wallet, store it locally, and display an address in the format: 
+
+6. **Get Your Address**:
      ```
-     My address: 0xf4b2f12afa634c206bdf5f0dd6dd90f024ad62b7
+     curl localhost:8085/address/
      ```
 
-6. **Become a Validator Node**:
+7. **Become a Validator Node**:
 
    - Initially, your node will synchronize with the blockchain but will not assume validator responsibilities until it possesses staked PWR Coins.
    
@@ -66,37 +66,12 @@
    nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0 &
    ```
 
+9. **Getting Your Private Key**:
+   ```bash
+   nohup sudo java -jar validator.jar get-private-key password
+   ```
+
+   A hex string priate key will be returned. This key can be used in the [PWR Browser Wallet](https://chromewebstore.google.com/u/3/detail/pwr-wallet/kennjipeijpeengjlogfdjkiiadhbmjl) 
+
 Congratulations, you've now set up and run a PWR Chain validator node!
 
-### **RPC Node Guide**
-
-#### **Requirements**:
-- **CPU**: 1 vCPU
-- **Memory**: 1 GB RAM
-- **Disk**: 25 GB HDD or higher
-- **Open TCP Ports**: 8231, 8085
-
-#### **Setup on Ubuntu Server**:
-
-1. **Update OS**: 
-   ```bash
-   sudo apt update
-   ```
-
-2. **Install Java**: 
-   ```bash
-   apt install openjdk-19-jre-headless
-   ```
-
-3. **Install the rpc node software and config file**:
-   ```bash
-   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/validator.jar
-   wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/rpc/config.json
-   ```
-   Modify the config file as needed.
-
-4. **Run the node**:
-   ```bash
-   nohup sudo java -jar validator.jar --rpc & 
-   ```
-Congratulations, you've now set up and run a PWR Chain RPC node!
