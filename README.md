@@ -77,7 +77,7 @@
 
 11. **Getting Your Private Key**:
     ```bash
-    nohup sudo java -jar validator.jar get-private-key password
+    sudo java -jar validator.jar get-private-key password
     ```
     A hex string priate key will be returned. This key can be used in the [PWR Browser Wallet](https://chromewebstore.google.com/u/3/detail/pwr-wallet/kennjipeijpeengjlogfdjkiiadhbmjl) 
 
