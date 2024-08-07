@@ -39,12 +39,13 @@
    - Press `Y` to confirm saving the password.
   
 5. **Import Your Validator**:
+
    If you have a private key you want to import then use this command, otherwise skip to the next step.
    ```bash
    sudo java -jar validator.jar --import-key <private key here> password
    ```
 
-6. **Run the Node**:
+7. **Run the Node**:
    Replace `<YOUR_SERVER_IP>` with your server's actual IP.
    ```bash
    sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0
@@ -53,12 +54,12 @@
    --compression-level sets the level of compression you want your node to use.
    Compression level varies from 0 - 9. 0 disables compression. 9 sets it to maximum.
 
-7. **Get Your Address**:
+8. **Get Your Address**:
      ```
      curl localhost:8085/address/
      ```
 
-8. **Become a Validator Node**:
+9. **Become a Validator Node**:
 
    - Initially, your node will synchronize with the blockchain but will not assume validator responsibilities until it possesses staked PWR Coins.
    
@@ -66,13 +67,13 @@
    
    - After claiming your coins, your node will initiate a transaction to enlist as a validator.
 
-9. **Running in the Background**:
+10. **Running in the Background**:
    If you wish to run the node in the background, ensuring it remains active after closing the terminal, utilize the `nohup` command:
    ```bash
    nohup sudo java -jar validator.jar password <YOUR_SERVER_IP> --compression-level 0 &
    ```
 
-10. **Getting Your Private Key**:
+11. **Getting Your Private Key**:
    ```bash
    nohup sudo java -jar validator.jar get-private-key password
    ```
