@@ -8,7 +8,7 @@
 #### **Requirements**:
 - **CPU**: 1 vCPU
 - **Memory**: 1 GB RAM
-- **Disk**: 25 GB HDD or higher
+- **Disk**: 50 GB HDD or higher
 - **Open TCP Ports**: 8231, 8085
 - **Open UDP Port**: 7621
 
