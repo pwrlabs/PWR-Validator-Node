@@ -88,12 +88,16 @@
   "description14": "The max number of blocks to share per synchronization request from others",
   "synchronizationShareBlocksCount": 10,
   "description11": "If true, this node will synchronize with the validators, if false, it will synchronize with only the provided nodes",
-  "synchronizeWithValidators": true,
+  "synchronizeWithValidators": false,
   "description12": "The list of validator or rpc nodes that this node fetches blocks from",
   "synchronizationNodes": [
     {
       "name": "PWR Public RPC Node",
       "ip": "51.68.144.27"
+    },
+    {
+      "name": "Edy's Node",
+      "ip": "159.89.19.3"
     }
   ]
 
