@@ -88,7 +88,7 @@
   "description14": "The max number of blocks to share per synchronization request from others",
   "synchronizationShareBlocksCount": 100,
   "description11": "If true, this node will synchronize with the validators, if false, it will synchronize with only the provided nodes",
-  "synchronizeWithValidators": false,
+  "synchronizeWithValidators": true,
   "description12": "The list of validator or rpc nodes that this node fetches blocks from",
   "synchronizationNodes": [
     {
