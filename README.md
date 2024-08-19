@@ -21,7 +21,7 @@
 
 2. **Install Java**: 
    ```bash
-   apt install openjdk-19-jre-headless
+   sudo apt install default-jdk
    ```
 
 3. **Install the validator node software and config file**:
