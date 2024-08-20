@@ -9,8 +9,8 @@
   "validatorApiBanLimitPerMinute": 100,
 
   "description4": "How many tcp connections can be made per minute by random ips before the ip is limited or banned",
-  "generalTcpAccessLimitPerMinute": 600,
-  "generalTcpBanLimitPerMinute": 900,
+  "generalTcpAccessLimitPerMinute": 1200,
+  "generalTcpBanLimitPerMinute":1500,
 
   "description5": "How many tcp connections can be made per minute by other validators before the ip is limited or banned",
   "description6": "These 2 variables are only used in validator nodes and not rpc nodes",
