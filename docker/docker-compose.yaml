@@ -1,0 +1,25 @@
+# change '<YOUR_PUBLIC_IP>' with your actual IP
+
+services:
+  validator1:
+    build: .
+    container_name: pwr-validator
+    ports:
+      # OPTION 1 (EXPOSE to all available IP)
+      - "8231:8231"
+      - "8085:8085"
+      - "7621:7621/udp"
+
+      # OPTION 2 (EXPOSE to Specific Public IP) - Usefull if you have more than 1 Public IP
+      # - "<YOUR_PUBLIC_IP>:8231:8231"
+      # - "<YOUR_PUBLIC_IP>:8085:8085"
+      # - "<YOUR_PUBLIC_IP>:7621:7621/udp"
+    environment:
+      # this value will replace 'SERVER_IP' Variable inside Dockerfile
+      SERVER_IP: <YOUR_PUBLIC_IP>
+    restart: always
+    volumes:
+      - pwr-validator-data:/app
+
+volumes:
+  pwr-validator-data:
