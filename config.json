@@ -93,10 +93,6 @@
   "description12": "The list of validator or rpc nodes that this node fetches blocks from",
   "synchronizationNodes": [
     {
-      "name": "PWR Public RPC Node",
-      "ip": "51.68.144.27"
-    },
-    {
       "name": "Edy's Node",
       "ip": "159.89.19.3"
     },
